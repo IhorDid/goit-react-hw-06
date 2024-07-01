@@ -12,13 +12,9 @@ const ContactList = () => {
   );
   return (
     <ul className={styles.users}>
-      {filterContacts.map((contact) => {
-        return (
-          <li key={contact.id}>
-            <Contact currentUser={contact} />
-          </li>
-        );
-      })}
+      {filterContacts.map((contact) => (
+        <Contact key={contact.id} currentUser={contact} />
+      ))}
     </ul>
   );
 };
